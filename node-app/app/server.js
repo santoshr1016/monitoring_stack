@@ -17,6 +17,12 @@ logger.info('Logging logging all the way');
 logger.info('I think this is enough');
 logger.info('nope, one more!');
 
+app.get('/', function (req, res) {
+    logger.info("I am inside Hello World function")
+    res.send('Hello World from NodeJS! - YOLO');
+    logger.info("End of Hello World function")
+  });
+
 app.listen(3000, function () {
     logger.info("app listening on port 3000!");
 });
